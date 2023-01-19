@@ -17,7 +17,7 @@ public class GcsController {
     @GetMapping("/read")
     public String readGcsFile() throws IOException {
         return StreamUtils.copyToString(
-                gcsFile.getInputStream(),
+                this.gcsFile.getInputStream(),
                 Charset.defaultCharset());
     }
 }
